@@ -1,7 +1,7 @@
 require "pry"
 
 class MusicLibraryController
-  attr_accessor :path, :name, :song
+  attr_accessor :path, :name
 
   extend Concerns::Findable
 
