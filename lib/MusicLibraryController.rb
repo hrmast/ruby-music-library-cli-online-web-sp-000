@@ -101,8 +101,7 @@ class MusicLibraryController
         Song.all.sort {|a, b| a.name <=> b.name}.uniq.each do |song|
           choice << "Playing #{song.name} by #{song.artist.name}"
         end
-         binding.pry
-        puts choice[input - 1]
-      end
+        # binding.pry
+
     end
 end
