@@ -94,13 +94,14 @@ class MusicLibraryController
 
       puts "Which song number would you like to play?"
       input = gets.chomp.to_i
-      valid_input = input > 0 && (1..Song.all.length + 1)
+      valid_input = input > 0 && (input <= Song.all.length)
 
       if valid_input == true
         choice = []
         Song.all.sort {|a, b| a.name <=> b.name}.uniq.each do |song|
           choice << "Playing #{song.name} by #{song.artist.name}"
         end
+        pry
         return choice[input]
       end
     end
