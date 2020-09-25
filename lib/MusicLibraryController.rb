@@ -102,7 +102,7 @@ class MusicLibraryController
           choice << "Playing #{song.name} by #{song.artist.name}"
         end
         binding.pry
-        puts choice[input]
+        puts choice[input - 1]
       end
     end
 end
